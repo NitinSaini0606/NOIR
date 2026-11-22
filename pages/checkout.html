@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" class="checkout-page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | NOIR</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/checkout.css">
+</head>
+<body>
+  <header class="home-header"><div class="nav-wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">✦</span><span>NOIR</span></a>
+    <div class="checkout-progress"><span class="progress-done">1 Cart</span><span>›</span><strong>2 Checkout</strong><span>›</span><span>3 Confirmation</span></div>
+    <a class="cart-link" href="cart.html" aria-label="Back to cart">🛒</a>
+  </div></header>
+
+  <main class="checkout-main">
+    <div class="checkout-heading"><span class="section-kicker">Almost ready</span><h1>Complete your order</h1><p>Freshly made, carefully packed and on its way to you.</p></div>
+    <section class="checkout-layout" data-checkout-layout>
+      <form class="checkout-form" id="checkout-form" novalidate>
+        <section class="checkout-card"><div class="checkout-card-heading"><span class="step-number">01</span><div><h2>Contact details</h2><p>We’ll use these details for your order updates.</p></div></div><div class="form-grid"><div class="checkout-field"><label for="customer-name">Full name</label><input id="customer-name" name="fullName" type="text" autocomplete="name" required><span class="checkout-error" data-error-for="customer-name"></span></div><div class="checkout-field"><label for="customer-phone">Phone number</label><input id="customer-phone" name="phone" type="tel" autocomplete="tel" required><span class="checkout-error" data-error-for="customer-phone"></span></div><div class="checkout-field full-width"><label for="customer-email">Email address</label><input id="customer-email" name="email" type="email" autocomplete="email" required><span class="checkout-error" data-error-for="customer-email"></span></div></div></section>
+        <section class="checkout-card"><div class="checkout-card-heading"><span class="step-number">02</span><div><h2>Delivery address</h2><p>Where should we deliver the deliciousness?</p></div></div><div class="form-grid"><div class="checkout-field full-width"><label for="address-line">Flat, house no. and street</label><input id="address-line" name="address" type="text" autocomplete="street-address" placeholder="Apartment, house number and street" required><span class="checkout-error" data-error-for="address-line"></span></div><div class="checkout-field"><label for="address-city">City</label><input id="address-city" name="city" type="text" autocomplete="address-level2" placeholder="Mumbai" required><span class="checkout-error" data-error-for="address-city"></span></div><div class="checkout-field"><label for="address-state">State</label><input id="address-state" name="state" type="text" autocomplete="address-level1" placeholder="Maharashtra" required><span class="checkout-error" data-error-for="address-state"></span></div><div class="checkout-field"><label for="address-pincode">PIN code</label><input id="address-pincode" name="pincode" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="400001" required><span class="checkout-error" data-error-for="address-pincode"></span></div></div></section>
+        <section class="checkout-card"><div class="checkout-card-heading"><span class="step-number">03</span><div><h2>Payment method</h2><p>Simple, secure and hassle-free.</p></div></div><label class="payment-option"><input type="radio" name="payment" value="cod" checked><span class="payment-icon">💵</span><span><strong>Cash on Delivery</strong><small>Pay when your order arrives</small></span><span class="payment-check">✓</span></label><p class="payment-note">Online payments are not enabled in this demo experience.</p></section>
+        <div class="checkout-message" data-checkout-message role="alert"></div>
+        <button class="place-order-button" type="submit">Place Order <span>→</span></button>
+      </form>
+
+      <aside class="checkout-summary"><h2>Your order</h2><div class="checkout-items" data-checkout-items></div><div class="checkout-summary-lines"><div><span>Subtotal</span><strong data-checkout-subtotal>₹0</strong></div><div><span>Delivery fee</span><strong data-checkout-delivery>₹0</strong></div><div><span>Taxes</span><strong data-checkout-tax>₹0</strong></div></div><div class="checkout-total"><span>Total payable</span><strong data-checkout-total>₹0</strong></div></aside>
+    </section>
+    <section class="order-confirmation" data-confirmation hidden><div class="confirmation-check">✓</div><span class="section-kicker">Order confirmed</span><h2>That’s a delicious decision!</h2><p>Your order has been placed successfully. We’ll start preparing it right away.</p><div class="order-id-box"><span>Order ID</span><strong data-order-id></strong></div><p class="confirmation-small">A confirmation has been saved for your demo order. Cash on Delivery selected.</p><a class="primary-cart-button" href="index.html">Continue exploring</a></section>
+  </main>
+  <script type="module" src="../js/checkout-page.js"></script><script type="module" src="../js/app.js"></script>
+</body>
+</html>
